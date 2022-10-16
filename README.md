@@ -10,5 +10,6 @@
 5. docker-compose up 
 6.  http://localhost:8890/ firefoxen sartu
 7. Bertan admin erabiltzailea eta test pasahitza erabili
-8 . barruan gureweb izeneko datu basean importatu gureweb.sql
+
+8 . barruan gureweb izeneko datu basean importatu gureweb.sql lehen deskargatu dena
 9. Beste firefox bentana batean http://localhost:81/registro.php sartu
