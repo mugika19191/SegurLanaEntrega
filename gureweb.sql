@@ -3,8 +3,8 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: db
--- Tiempo de generación: 16-10-2022 a las 17:06:46
--- Versión del servidor: 10.9.3-MariaDB-1:10.9.3+maria~ubu2204
+-- Tiempo de generación: 20-11-2022 a las 17:02:51
+-- Versión del servidor: 10.8.2-MariaDB-1:10.8.2+maria~focal
 -- Versión de PHP: 8.0.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -42,7 +42,26 @@ CREATE TABLE `erabiltzaile` (
 --
 
 INSERT INTO `erabiltzaile` (`izena`, `abizena`, `telefonoa`, `mail`, `nan`, `jaiotzeData`, `pasahitza`) VALUES
-('Iker', 'Mugica', 688650898, 'mugika1919@gmail.com', '79134291P', '2000-06-07', 'Password.123');
+('Iker', 'Mugica', 688650898, 'mugika1919@gmail.com', '79134291P', '2000-06-07', '$2y$10$DXucUSyaJ00ih0SbfzcfIO2nGDR/JZ4liT.x7vVefsTlJlodVp3cW');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `intento`
+--
+
+CREATE TABLE `intento` (
+  `nan` varchar(9) NOT NULL,
+  `wrong` int(10) NOT NULL,
+  `denbora` int(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `intento`
+--
+
+INSERT INTO `intento` (`nan`, `wrong`, `denbora`) VALUES
+('79134291P', 5, 1668880576);
 
 -- --------------------------------------------------------
 
@@ -100,6 +119,12 @@ ALTER TABLE `erabiltzaile`
   ADD PRIMARY KEY (`nan`);
 
 --
+-- Indices de la tabla `intento`
+--
+ALTER TABLE `intento`
+  ADD PRIMARY KEY (`nan`);
+
+--
 -- Indices de la tabla `katalogo`
 --
 ALTER TABLE `katalogo`
@@ -120,7 +145,7 @@ ALTER TABLE `perfil`
 -- AUTO_INCREMENT de la tabla `katalogo`
 --
 ALTER TABLE `katalogo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Restricciones para tablas volcadas
