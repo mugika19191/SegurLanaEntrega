@@ -4,7 +4,7 @@
 ##### Zer egin:
 1. git clone https://github.com/mugika19191/SegurLanaEntrega
 2. mugitu dokumentua deskagatu den lekura
-3. "1.bidalketa/docekr/" barruan sartu
+3. "2.bidalketa/docker/" barruan sartu
 ##### Komando hauek erabili:
 4. docker build -t="web" .
 5. docker-compose up 
